@@ -1,38 +1,837 @@
-.App {
+body {
+  background-color: #ccc;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+  background-color: #007bff;
+  padding: 0;
+  text-align: left; /* Changed to left */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+  margin: 0;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.header-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  flex-grow: 1; /* This ensures the title takes up available space */
+}
+
+.header:hover {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Other styles remain unchanged */
+.contact-section {
+  background-color: #2980b9;
+  color: white;
+  padding: 40px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact-section:hover {
+  transform: scale(1.02);
+}
+
+.phone-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: yellow;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.phone-number:hover {
+  text-decoration: underline;
+  color: orange;
+}
+
+.map-container {
+  margin-top: 20px;
+}
+
+.hours-section {
+  background-color: #007bff;
+  padding: 40px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.hours-section:hover {
+  transform: scale(1.02);
+}
+
+.hours-box {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  display: inline-block;
+  padding: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.notice {
+  background-color: #666;
+  color: yellow;
+  padding: 5px 0;
+  font-weight: bold;
+  font-size: 1.8rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  margin-right: 15px;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+  transform: rotate(5deg);
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+/* Nav Links */
+nav a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: yellow;
+  text-shadow: 2px 2px 5px rgba(255, 255, 0, 0.5);
+}
+
+/* Menu Container */
+.menu-container {
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Menu Title */
+.menu-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  padding: 15px 0;
+  background-color: #007bff;
+  border-radius: 8px;
+}
+
+/* Menu Subtitle */
+.menu-subtitle {
+  font-size: 1.4rem;
+  color: white;
+  background-color: #8b0000;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+/* Menu Pricing */
+.menu-pricing {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* Menu Grid */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Larger items */
+  gap: 30px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Menu Item */
+.menu-item {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-item:hover {
+  transform: scale(1.05);
+}
+
+/* Menu Item Image */
+.menu-image {
+  width: 100%;
+  max-width: 250px; /* Bigger images */
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-item:hover .menu-image {
+  transform: scale(1.1);
+}
+
+/* Menu Item Text */
+.menu-item-text {
+  margin-top: 15px;
+}
+
+/* Menu Item Name */
+.menu-item-name {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+/* Menu Item Price */
+.menu-item-price {
+  font-size: 1.3rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.menu-filters {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.nav-button {
+  position: relative;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+/* Hover effect - background fill animation */
+.nav-button:hover {
+  background: white;
+  color: #007bff; /* Adjust this to match your theme */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Button ripple animation */
+.nav-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: width 0.4s ease-out, height 0.4s ease-out, opacity 0.4s ease-out;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.nav-button:active::after {
+  width: 0;
+  height: 0;
+  opacity: 1;
+}
+
+/* Hover underline effect */
+.nav-button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-button:hover::before {
+  transform: scaleX(1);
+}
+
+.carousel-container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.carousel-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-image {
+  width: 100%;
+  max-width: 800px; /* Adjust based on preference */
+  max-height: 500px; /* Prevent excessive scaling */
+  height: auto;
+  object-fit: contain; /* Ensures images do not stretch */
+  margin: auto;
+}
+
+
+/* Sticky Header */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 123, 255, 0.9); /* Slight transparency */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
+  margin: 0;
+}
+
+body {
+  margin: 0;  /* Ensure there's no unwanted margin */
+  padding-top: 0;
+  overflow-x: hidden; /* Prevent unwanted horizontal scroll */
+}
+
+html{
+  margin: 0;
+  padding: 0;
+} 
+
+/* Tabs Container */
+.tabs-container {
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Tab Navigation */
+.tabs-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;  /* Allow wrapping */
+  justify-content: center; /* Center align buttons */
+  padding: 5px;
+  max-width: 100%; /* Prevent overflow */
+  overflow-x: auto; /* Allow horizontal scrolling if needed */
+}
+
+.tab-button {
+  background-color: #007bff;
+  border: none;
   color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+.tab-button:hover {
+  background-color: #2980b9;
 }
 
-@keyframes App-logo-spin {
+.tab-button.active {
+  background-color: #0056b3;
+}
+
+/* Tab Content */
+.tab-content {
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+} 
+
+.filter-button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.filter-button:hover {
+  background-color: #0056b3;
+}
+
+.filter-button.active {
+  background-color: #8b0000;
+}
+
+.admin-dashboard {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.admin-dashboard h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.admin-dashboard input,
+.admin-dashboard textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.admin-dashboard textarea {
+  height: 100px;
+  resize: none;
+}
+
+.admin-dashboard-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.admin-dashboard-button:hover {
+  background-color: #0056b3;
+} 
+
+/* Announcements Container */
+.announcements {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Announcements Title */
+.announcements h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Individual Announcement Card */
+.announcement-card {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 15px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.announcement-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Announcement Title */
+.announcement-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+/* Announcement Body */
+.announcement-card p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Announcement Date */
+.announcement-card small {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Separator Line */
+.announcement-card hr {
+  border: none;
+  height: 1px;
+  background: #ddd;
+  margin-top: 15px;
+}
+
+/* No Announcements Message */
+.announcements p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(-10px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Centered Layout for Admin Pages */
+.admin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+/* Admin Login Box */
+.admin-login {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 350px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Admin Title */
+.admin-login h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+/* Admin Dashboard */
+.admin-dashboard {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Admin Dashboard Title */
+.admin-dashboard h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+/* Scheduled Pickup Box */
+.order-item {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Delete Button */
+.order-item button {
+  background: #ff4d4d;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.order-item button:hover {
+  background: #cc0000;
+}
+
+/* Create Announcement Section */
+.admin-dashboard input,
+.admin-dashboard textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s ease-in-out;
+}
+
+/* Focus Effect */
+.admin-dashboard input:focus,
+.admin-dashboard textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+/* Upload Announcement Button */
+.admin-dashboard button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.admin-dashboard button:hover {
+  background: linear-gradient(135deg, #0056b3, #004494);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Delete Button */
+.delete-btn {
+  background: #ff4d4d;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  margin-top: 10px;
+}
+
+.delete-btn:hover {
+  background: #cc0000;
+}
+
+.admin-auth-container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  text-align: center;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.login-btn {
+  background: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-btn:hover {
+  background: #0056b3;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+}
+
+.scheduled-pickup-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  text-align: center;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pickup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+.pickup-btn {
+  background: #28a745;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.pickup-btn:hover {
+  background: #218838;
+}
+
+.success-message {
+  color: green;
+  font-size: 14px;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+}
+
+/* General Mobile Styles */
+@media (max-width: 768px) {
+  .tab-button {
+    font-size: 0.8rem;  /* Smaller text */
+    padding: 6px 10px;  /* Adjust padding */
+    min-width: 75px;    /* Reduce button width */
+    height: auto;       
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+
+  .tabs-container {
+    display: flex;
+    flex-wrap: wrap;   /* Allow buttons to wrap */
+    gap: 5px;
+    justify-content: center; 
+    max-width: 100%;
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+  }
+}
+
+/* 📱 Portrait Mode: Even Smaller Buttons */
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  .tab-button {
+    font-size: 0.7rem !important; /* Even smaller text */
+    padding: 5px 8px !important; /* Less padding */
+    min-width: 65px !important; /* Narrower buttons */
+    max-width: 80px !important;
+  }
+
+  .tabs-container {
+    flex-wrap: nowrap !important; /* Prevent excessive wrapping */
+    justify-content: center !important;
+  }
+}
+
+/* 📟 Landscape Mode: Restore Normal Size */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .tab-button {
+    font-size: 0.9rem !important; /* Restore slightly larger size */
+    padding: 8px 12px !important;
+    min-width: 80px !important;
+    max-width: 120px !important;
+  }
+
+  .tabs-container {
+    flex-wrap: wrap !important; /* Allow buttons to fit naturally */
+    justify-content: center !important;
+  }
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  body {
+    max-height: 100vh;
+    overflow-y: auto; /* Ensures scrolling if needed */
+  }
+
+  .tabs-container {
+    max-height: 90vh; /* Adjust based on your layout */
+    overflow-y: auto;
   }
 }
