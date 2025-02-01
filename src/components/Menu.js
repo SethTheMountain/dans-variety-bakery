@@ -37,13 +37,13 @@ function Menu() {  // Pass a closeMenu function as a prop
       name: 'Classic Glazed with Chocolate Icing and Sprinkles',
       price: '$1.20',
       category: "Glazed",
-      imgSrc: "/images/MenuIMG/GazedChocspr.png"
+      imgSrc: "/images/MenuIMG/GazedChocSpr.png"
     },
     {
       name: 'Classic Glazed with Strawberry Icing and Sprinkles',
       price: '$1.20',
       category: "Glazed",
-      imgSrc: "/images/MenuIMG/GazedStrawbspr.png"
+      imgSrc: "/images/MenuIMG/GazedStrawbSpr.png"
     },
     {
       name: 'Cake with Chocolate Icing',
