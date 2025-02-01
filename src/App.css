@@ -385,6 +385,12 @@ html{
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px; /* Ensures space below tabs */
 } 
 
 .filter-button {
@@ -406,125 +412,6 @@ html{
 .filter-button.active {
   background-color: #8b0000;
 }
-
-.admin-dashboard {
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.admin-dashboard h2 {
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.admin-dashboard input,
-.admin-dashboard textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-.admin-dashboard textarea {
-  height: 100px;
-  resize: none;
-}
-
-.admin-dashboard-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease-in-out;
-}
-
-.admin-dashboard-button:hover {
-  background-color: #0056b3;
-} 
-
-/* Announcements Container */
-.announcements {
-  max-width: 700px;
-  margin: 40px auto;
-  padding: 20px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-/* Announcements Title */
-.announcements h2 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* Individual Announcement Card */
-.announcement-card {
-  background: #f9f9f9;
-  border-radius: 8px;
-  padding: 20px;
-  margin: 15px 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-/* Hover Effect */
-.announcement-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Announcement Title */
-.announcement-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #007bff;
-}
-
-/* Announcement Body */
-.announcement-card p {
-  font-size: 1.1rem;
-  color: #555;
-  line-height: 1.5;
-}
-
-/* Announcement Date */
-.announcement-card small {
-  display: block;
-  margin-top: 10px;
-  font-size: 0.9rem;
-  color: #777;
-}
-
-/* Separator Line */
-.announcement-card hr {
-  border: none;
-  height: 1px;
-  background: #ddd;
-  margin-top: 15px;
-}
-
-/* No Announcements Message */
-.announcements p {
-  font-size: 1.2rem;
-  color: #666;
-}
-
 /* Fade-in Animation */
 @keyframes fadeIn {
   from {
@@ -537,118 +424,6 @@ html{
   }
 }
 
-/* Centered Layout for Admin Pages */
-.admin-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #f5f5f5;
-}
-
-/* Admin Login Box */
-.admin-login {
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  width: 350px;
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-/* Admin Title */
-.admin-login h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-
-/* Admin Dashboard */
-.admin-dashboard {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 30px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-/* Admin Dashboard Title */
-.admin-dashboard h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #333;
-  text-transform: uppercase;
-}
-
-/* Scheduled Pickup Box */
-.order-item {
-  background: #f9f9f9;
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Delete Button */
-.order-item button {
-  background: #ff4d4d;
-  color: white;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease-in-out;
-}
-
-.order-item button:hover {
-  background: #cc0000;
-}
-
-/* Create Announcement Section */
-.admin-dashboard input,
-.admin-dashboard textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: border 0.3s ease-in-out;
-}
-
-/* Focus Effect */
-.admin-dashboard input:focus,
-.admin-dashboard textarea:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
-  outline: none;
-}
-
-/* Upload Announcement Button */
-.admin-dashboard button {
-  width: 100%;
-  padding: 12px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 8px;
-  background: linear-gradient(135deg, #007bff, #0056b3);
-  color: white;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-.admin-dashboard button:hover {
-  background: linear-gradient(135deg, #0056b3, #004494);
-  transform: translateY(-2px);
-  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
-}
 
 /* Fade-in Animation */
 @keyframes fadeIn {
@@ -660,118 +435,6 @@ html{
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* Delete Button */
-.delete-btn {
-  background: #ff4d4d;
-  color: white;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease-in-out;
-  margin-top: 10px;
-}
-
-.delete-btn:hover {
-  background: #cc0000;
-}
-
-.admin-auth-container {
-  max-width: 400px;
-  margin: 80px auto;
-  padding: 30px;
-  text-align: center;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.auth-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-.login-btn {
-  background: #007bff;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.login-btn:hover {
-  background: #0056b3;
-}
-
-.error-message {
-  color: red;
-  font-size: 14px;
-}
-
-.scheduled-pickup-container {
-  max-width: 500px;
-  margin: 50px auto;
-  padding: 30px;
-  text-align: center;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.pickup-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-textarea {
-  height: 100px;
-  resize: none;
-}
-
-.pickup-btn {
-  background: #28a745;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.pickup-btn:hover {
-  background: #218838;
-}
-
-.success-message {
-  color: green;
-  font-size: 14px;
-}
-
-.error-message {
-  color: red;
-  font-size: 14px;
 }
 
 /* General Mobile Styles */
@@ -834,4 +497,31 @@ textarea {
     max-height: 90vh; /* Adjust based on your layout */
     overflow-y: auto;
   }
+}
+
+/* Ensure the hours section is centered */
+.hours-section {
+  background-color: #007bff;
+  padding: 40px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  max-width: 600px; /* Limits width for better centering */
+  margin: 20px auto; /* Centers it below the tabs */
+  text-align: center;
+}
+
+.hours-section:hover {
+  transform: scale(1.02);
+}
+
+/* Centering the hours box */
+.hours-box {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  display: block;
+  padding: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 0 auto; /* Ensures full centering */
 }
